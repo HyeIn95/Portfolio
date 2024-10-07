@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+#wrap {position: relative; background: url('../images/common/sub_bg.jpg') no-repeat center/cover;}
+#main {position: relative; width: 100%; height: 1000px; }
+#main .login {position: absolute; left: 50%; top: calc(50% + 30px); transform: translate(-50%, -50%); width: 700px; height: 600px; background-color: #fff; text-align: center;}
+.login::before {position: absolute; content: ''; display: block; width: 100px; height: 50px; background: #ddd url('../images/common/arrow-right-short.svg') no-repeat center/contain; left: 50%; bottom: 100px; transform: translateX(-50%); border-radius: 30px; cursor: pointer;}
+.login h2 {font-family: var(--yangM-font); font-size: 2rem; color: #000; padding-top: 50px;}
+.login form {padding: 50px 100px 0;}
+.login form fieldset {font-family: var(--yangM-font); font-size: 1.6rem; color: #999;}
+.login form fieldset input#id {background: var(--sub-color) url('../images/common/arrow-right-short.svg') no-repeat right 20px center; width: 500px; height: 50px; background: #eee; border-top: 3px solid var(--main-color); margin-bottom: 30px; padding-left: 20px; font-family: var(--yangL-font); font-size: 1.6rem;}
+.login form fieldset input#password {background: var(--sub-color) url('../images/common/arrow-right-short.svg') no-repeat right 20px center; width: 500px; height: 50px; background: #eee; border-top: 3px solid var(--main-color); margin-bottom: 20px; padding-left: 20px; font-family: var(--yangL-font); font-size: 1.6rem;}
+.login form fieldset input#keep {margin-right: 10px;}
+.login form fieldset .check {text-align: left; }
+.login ul {display: flex; gap: 10px; align-items: center; justify-content: center; padding: 50px 0;}
+.login ul li {width: 120px; height: 40px; border-radius: 30px; border: rgb(0, 0, 0,0.0) 5px solid;}
+.login ul li a {padding: 0 30px;}
+.login ul li a img {display: inline-block;}
+.login ul li:nth-child(1) {background-color: #1877f2;}
+.login ul li:nth-child(2) {position: relative; background: #fff; width: 114px; height: 34px;}
+.login ul li:nth-child(2) a img { padding-bottom: 3px;}
+.login ul li:nth-child(2)::before {position: absolute; content: ''; display: block; border: 5px solid transparent; border-radius: 50px; background-image: linear-gradient(0deg, rgba(49,159,67,1) 0%, rgba(227,54,41,1) 11%, rgba(88,125,189,1) 88%, rgba(248,189,0,1) 100%); background-origin: border-box; background-clip: border-box; width: 110px; height: 30px; left: 50%; top:50%; transform: translate(-50%, -50%); z-index: -1;}
+.login ul li:nth-child(3) {background-color: #000;}
+.login ul li:nth-child(4) {background-color: #076907;}
+.login .txt {padding-top: 80px;}
+
+@media (max-width: 768px){
+  #main {height: 600px;}
+  #main .login {width: 350px; height: 450px;}
+  .login::before {width: 80px; height: 40px; bottom: 90px; transform: translateX(-50%); border-radius: 30px; cursor: pointer;}
+  .login h2 {font-size: 1.6rem; padding-top: 30px;}
+  .login form {padding: 20px;}
+  .login form fieldset {font-size: 1.4rem;}
+  .login form fieldset input#id {background: var(--sub-color) url('../images/common/arrow-right-short.svg') no-repeat right 20px center; width: 300px; height: 40px; margin-bottom: 20px; font-size: 1.4rem;}
+  .login form fieldset input#password {background: var(--sub-color) url('../images/common/arrow-right-short.svg') no-repeat right 20px center; width: 300px; height: 40px; margin-bottom: 20px; font-size: 1.4rem;}
+  .login form fieldset input#keep {margin-right: 10px;}
+  .login form fieldset .check {text-align: left;}
+  .login ul {padding: 30px 0;}
+  .login ul li {width: 80px; height: 36px; border-radius: 30px; border: rgb(0, 0, 0,0.0) 5px solid;}
+  .login ul li a {padding: 0 10px;}
+  .login ul li:nth-child(2) {width: 74px; height: 34px;}
+  .login ul li:nth-child(2)::before { width: 70px; height: 30px;}
+  .login .txt {padding-top: 50px; font-size: 1.4rem;}
+  }

@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+section h2 {font-size: 0;}
+
+/* main1 - #main_visual */
+#main_visual {position: relative; width: 100%; height: 100vh; }
+#main_visual video {width: 100%; height: 100%; object-fit: cover; position: absolute; left: 0; top: 0;}
+
+/* main2 - #games */
+#games {overflow: hidden;}
+#games .games_1 {position: relative; width: 100%; display: block;}
+#games .games_2 {width: 100%; height: 100%; display: block; display: flex; flex-wrap: wrap;}
+#games .games_2 li {width: calc(100% / 3); height: 500px; text-align: right; padding: 0 3%;}
+#games .games_2 li h3 {padding: 50px 0 10px; color: var(--sub-color); font-weight: 300; display: inline-block; text-shadow: #000 3px 3px 5px;}
+#games .games_2 li p {position: relative; font-size: 0;}
+#games .games_2 li p::before {position: absolute; content: '사이트 바로가기'; display: block; border-bottom: 3px solid var(--main-color); right: 0; top: 0; color: var(--sub-color); padding: 10px 10px; text-align: center; font-size: 1.2rem; text-shadow: #000 3px 3px 5px;}
+#games .games_2 li p + h4 {margin: 50px 0; padding: 10px 20px; font-weight: 300; font-size: 1.2rem; color: var(--sub-color);background-color: rgb(235, 0, 41,0.3); border-radius: 30px; display: inline-block; opacity: 0; transition: all 0.5s;}
+#games .games_2 li p:hover + h4 {opacity: 1;}
+
+@media (max-width:1200px) {
+#games .games_2 li p + h4 {display: none;}
+#games .games_2 li {width: 100%; height: 200px; text-align: right; padding: 0 3%;}
+#games .games_2 li:nth-child(1) {background: url('../images/main/2_games/LeagueOfLegends/mlol_bg_cut.jpg') no-repeat center/cover !important;}
+#games .games_2 li:nth-child(2) {background: url('../images/main/2_games/VALORANT/mvalo_bg_cut.jpg') no-repeat center/cover !important;}
+#games .games_2 li:nth-child(3) {background: url('../images/main/2_games/TFT/mtft_bg_cut.jpg') no-repeat center/cover !important;}
+#games .games_2 li:nth-child(4) {background: url('../images/main/2_games/LoLWildRift/mwr_bg_cut.jpg') no-repeat center/cover !important;}
+#games .games_2 li:nth-child(5) {background: url('../images/main/2_games/Runeterra/mrune_bg_cut.jpg') no-repeat center/cover !important;}
+#games .games_2 li:nth-child(6) {background: url('../images/main/2_games/Riotforge/mforge_bg_cut.jpg') no-repeat center/cover !important;}
+}
+
+/* #character */
+#character {width: 100%; height: 100vh; background-color: #fff; position: relative; overflow: hidden;}
+#character .inner {padding: 0; width: 100%; height: 100%;}
+#character img {display: block; width: 100%; height: 100%;}
+#character .character_container {display: flex; justify-content: space-between; width: 100%; height: 100vh; position: relative; background: #000; transition: opacity 3s ease;}
+#character .character_container::before {position: absolute; content: ''; display: block; left: 0; top: 0; width: 100%; height: 100%; filter: blur(5px);}
+                  /* character each images */
+#character .character_container1::before {background: url('../images/main/3_character/valo/reyna_bg.jpg') no-repeat center/cover;}
+#character .character_container2::before {background: url('../images/main/3_character/valo/sova_bg.jpg') no-repeat center/cover;}
+#character .character_container3::before {background: url('../images/main/3_character/valo/killjoy_bg.jpg') no-repeat center/cover;}
+#character .character_container4::before {background: url('../images/main/3_character/valo/omen_bg.jpg') no-repeat center/cover;}
+#character .character_container5::before {background: url('../images/main/3_character/lol/tank_bg.jpg') no-repeat center/cover;}
+#character .character_container6::before {background: url('../images/main/3_character/lol/assassin_bg.jpg') no-repeat center/cover;}
+#character .character_container7::before {background: url('../images/main/3_character/lol/warrior_bg.jpg') no-repeat center/cover;}
+#character .character_container8::before {background: url('../images/main/3_character/lol/ap_bg.jpg') no-repeat center/cover;}
+#character .character_container9::before {background: url('../images/main/3_character/lol/ad_bg.jpg') no-repeat center/cover;}
+#character .character_container10::before {background: url('../images/main/3_character/lol/sup_bg.jpg') no-repeat center/cover;}
+            /* game select */
+#character form {position: absolute; z-index: 999; right: 10%; top: 100px;} 
+#character form select {font-size: 2rem; padding: 0 20px; border-radius: 10px;}
+            /* li */
+#character ul.position {position: absolute; display: flex; z-index: 999; gap: 20px; right: 10%; top: 150px;}
+#character .position li {cursor: pointer; padding: 10px 30px; font-size: 2.5rem; text-wrap: nowrap;}
+#character .character_valo .position li {border-bottom: 3px solid var(--red-border);} 
+#character .character_lol .position li {border-bottom: 3px solid var(--yell-border);}
+#character .character_valo .position li.click_position {color: var(--red-border);}
+#character .character_lol .position li.click_position {color: var(--yell-border);}
+
+      /* left */
+@keyframes circleLotate {
+0% {}
+100% {rotate: 360deg;}
+}
+.character_container .left {position: relative; width: 50%; left: 5%;}
+.character_container .left::before {position: absolute; content: ''; display: block; width: 1200px; height: 1px; right: -950px; bottom: 350px;}
+.character_valo .character_container .left::before {background: var(--red-border);}
+.character_lol .character_container .left::before {background: var(--yell-border);}
+.character_container .left .left1 {position: absolute; left: calc(5% + 20px); top: 120px; width: 650px; height: 650px; border-radius: 50%; overflow: hidden; box-shadow: 15px 10px 20px rgba(0,0,0,0.3);}
+.character_container .left .circle {position: absolute; left: calc(5% + 30px); top: 130px; width: 630px; height: 630px; animation: circleLotate 25s linear infinite;}
+.character_valo .character_container .left .left2 {position: absolute; left: calc(5% + 10px); top: 180px; width: 400px;}
+.character_lol .character_container .left .left2 {position: absolute; left: calc(5% - 20px); top: 350px; width: 580px;}
+.character_container .left .left2 img {filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.8)); display: block;}
+      /* right */
+.character_container .right {position: relative; width: 50%; z-index: 1; right: 5%;}
+.character_container .right::before {position: absolute; content: ''; display: block; width: 1px; height: 200px; right: 50%; bottom: 0; z-index: -1;}
+.character_valo .character_container .right::before {background: var(--red-border);}
+.character_lol .character_container .right::before {background: var(--yell-border);}
+            /* txt */
+.character_container .right .right_txt {position: absolute; right: 10%; top: 250px; width: 550px; padding: 10px 10px 0px 10px; }
+.character_container .right .right_txt::before {position: absolute; content: ''; display: block; width: 100%; height: calc(100% + 30px); background: #fff; opacity: 0.2; left: 0; top: 0; z-index: -1;}
+.character_container .right .right_txt h3 {color: #ddd; font-weight: 400; font-size: 2rem; }
+.character_container .right .right_txt p {padding: 5px 0 10px;}
+.character_container .right .right_txt div {position: absolute; left: 10px; bottom: -20px;}
+.character_container .right .right_txt div i.bi {color: var(--sub-color);}
+.character_container .right .right_txt div i.fill_red {color: var(--red-border);}
+.character_container .right .right_txt div i.fill_yell {color: var(--yell-border);}
+.character_container .right .right_play {position: absolute; right: 10%; bottom: 90px; width: 615px;}
+.character_container .right .right_play video {width: 100%; height: 100%;}
+.character_container .right .right_play .square {position: absolute; width: 625px; height: 363px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+@media (max-width: 1300px) {
+      #character {height: 100vh;}
+                  /* game select */
+      #character form {right: 5%; top: 70px;} 
+      #character form select {font-size: 1.6rem; padding: 0 20px; border-radius: 30px;}
+                  /* li */
+      #character ul.position {gap: 30px; right: auto; left: 50%; transform: translateX(-50%); top: 100px;}
+      #character .position li {padding: 5px 30px; font-size: 2rem;}
+            /* left */
+      .character_container .left {left: 3%;}
+      .character_container .left::before {display: none;}
+      .character_container .left .left1 {left: 0; top: 230px; width: 450px; height: 450px;}
+      .character_container .left .circle {left: 10px; top: 240px; width: 430px; height: 430px;}
+      .character_valo .character_container .left .left2 {left: 0; top: 300px; width: 300px;}
+      .character_lol .character_container .left .left2 {left: 0; top: 400px; width: 400px;}
+            /* right */
+      .character_container .right::before {display: none;}
+                  /* txt */
+      .character_container .right .right_txt {right: 0; top: 230px; width: 450px;}
+      .character_container .right .right_txt::before {height: calc(100% + 30px);}
+      .character_container .right .right_txt h3 {font-size: 1.6rem; }
+      .character_container .right .right_txt p {font-size: 1.4rem;}
+      .character_container .right .right_play {right: 0; bottom: 100px; width: 450px;}
+      .character_container .right .right_play video {width: 100%; height: 100%;}
+      .character_container .right .right_play .square {position: absolute; width: 470px; height: auto; left: 50%; top: calc(50% - 3px); transform: translate(-50%, -50%);}
+      }
+
+@media (max-width: 992px) {
+      #character {height: inherit;}
+      #character .character_container {display: flex; flex-direction: column-reverse; justify-content: center; height: auto;}
+                  /* game select */
+      #character form {right: 5%; top: 70px;} 
+      #character form select {font-size: 1.6rem; padding: 0 20px; border-radius: 30px;}
+                  /* li */
+      #character ul.position {gap: 30px; right: auto; left: 50%; transform: translateX(-50%); top: 100px;}
+      #character .position li {padding: 5px 30px; font-size: 2rem;}
+            /* left */
+      .character_container .left {top: 0; left: 50%; transform: translateX(-50%); height: 600px;}
+      .character_container .left::before {display: none;}
+      .character_container .left .left1 {top: 0; width: 450px; height: 450px; left: 50%; transform: translateX(-50%);}
+      .character_container .left .circle {top: 10px; width: 430px; height: 430px; left: 50%; translate:calc(-50%);}
+      .character_valo .character_container .left .left2 {left: 50%; transform: translateX(-50%); top: 50px; width: 300px;}
+      .character_lol .character_container .left .left2 {left: 50%; transform: translateX(-50%); top: 60px; width: 400px;}
+            /* right */
+      .character_container .right {height: 350px; left: 50%; width: 500px; transform: translateX(-50%); top: 0;}
+      .character_container .right::before {display: none;}
+                  /* txt */
+      .character_container .right .right_txt {right: 0; top: auto; bottom: 50px; width: 500px;}
+      .character_container .right .right_txt::before {height: calc(100% + 30px);}
+      .character_container .right .right_txt h3 {font-size: 1.6rem;}
+      .character_container .right .right_txt p {font-size: 1.4rem;}
+      .character_container .right .right_play {display: none;}
+      }
+@media (max-width: 500px) {
+      #character {height: 670px;}
+                  /* game select */
+      #character form {right: 5%; top: 50px;} 
+      #character form select {font-size: 1.6rem; padding: 5px 20px; border-radius: 30px;}
+                  /* li */
+      #character ul.position {gap: 10px; top: 110px; display: grid; justify-items: center; width: 100%;}
+      #character .character_valo ul.position {grid-template-columns: 1fr 1fr;}
+      #character .character_lol ul.position {grid-template-columns: 1fr 1fr 1fr;}
+      #character .position li {padding: 5px 20px; font-size: 1.6rem; width: 100px; text-align: center;}
+            /* left */
+      .character_container .left {top: 0; margin-top: 230px; width: 100%; height: 450px; overflow: hidden;}
+      .character_container .left::before {display: none;}
+      .character_container .left .left1 {width: 350px; height: 350px; left: 50%; transform: translateX(-50%);}
+      .character_container .left .circle {width: 330px; height: 330px;}
+      
+      .character_valo .character_container .left .left2 {top: 80px; width: 200px;}
+      .character_lol .character_container .left .left2 { top: 100px; width: 350px;}
+            /* right */
+      .character_container .right {display: none;}
+      }
+
+/* #news */
+#news {background: url('../images/main/5_news/news.bg.jpg') repeat-y center/cover; padding: 100px 0;}
+#news .inner {text-align: center;}
+#news .inner h2 {display: inline-block; padding: 10px 60px; background: var(--other-color); color: var(--sub-color); font-size: 3rem; border-radius: 70px; margin-bottom: 50px; font-weight: 700; font-family: var(--eng-font);}
+#news .news_container {display: flex; justify-content: space-between; flex-wrap: wrap;}
+#news .news_container .news_list {width: 30%; position: relative;}
+#news .news_container .news_list .news_img {width: 100%; position: relative; overflow: hidden;}
+#news .news_container .news_list .news_img::after {position: absolute; content: ''; display: block; width: 100%; height: 100%; left: 0; top: 0; background: rgba(0,0,0,0.6); opacity: 0;}
+#news .news_container .news_list:hover .news_img::after {opacity: 1;}
+#news .news_container .news_list .news_img img {width: 100%; height: 100%; transition: all 0.5s;}
+#news .news_container .news_list:hover .news_img img {transform: scale(1.1);}
+#news .news_container .news_list h3 {font-size: 2rem; color: var(--sub-color); padding: 20px 0 10px; font-weight: 300;}
+#news .news_container .news_list h3 + p {font-size: 1.8rem; color: #999; margin-bottom: 50px;}
+#news .news_container .news_list .news_more a {display: inline-block; position: absolute; right: 20px; top: 20px; padding: 5px 10px; background: var(--main-color); color: var(--sub-color); border-radius: 50px;}
+
+@media (max-width: 1200px) {
+      #news {padding: 50px 0;}
+      #news .inner h2 {padding: 5px 40px; font-size: 2.5rem; margin-bottom: 30px;}
+      #news .news_container .news_list {width: 30%;}
+      #news .news_container .news_list h3 {font-size: 1.6rem; padding: 10px 0 5px; letter-spacing: -1px;}
+      #news .news_container .news_list h3 + p {font-size: 1.4rem; margin-bottom: 30px;}
+      #news .news_container .news_list .news_more a {font-size: 1.2rem; top: 10px; right: 10px; }
+}
+@media (max-width: 992px) {
+      #news .news_container .news_list {width: calc(50% - 30px);}
+      #news .news_container .news_list h3 + p {font-size: 1.2rem;}
+}
+@media (max-width: 768px) {
+      #news {padding: 50px 0;}
+    #news .inner h2 {padding: 5px 20px; font-size: 2rem; margin-bottom: 30px;}
+    #news .news_container .news_list {width: calc(50% - 20px);}
+    #news .news_container .news_list h3 {font-size: 1.2rem; padding: 5px;}
+    #news .news_container .news_list h3 + p {font-size: 1rem; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+}
+
+/* #download */
+#download {position: relative; width: 100%; height: 600px;}
+#download video {object-fit:cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+#download .download a {display: inline-block; color: var(--sub-color); padding: 15px 30px; background: var(--dark-color); border-radius: 50px; position: absolute; left: 50%; bottom: 100px; transform: translateX(-50%); font-family: var(--eng-font); font-weight: 700; font-size: 2rem; text-wrap: nowrap;}
+#download .download:hover a {background: var(--other-color);}
+
+@media (max-width: 992px){
+      #download .download a {padding: 10px 30px; bottom: 50px; font-size: 1.6rem;}
+}

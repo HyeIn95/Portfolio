@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#F9F9F9;}
+	.st3{font-family:'Giants-Regular';}
+	.st4{font-size:30px;}
+	.st5{fill:#1F1F1F;}
+</style>
+<g id="Layer_3" class="st0">
+	<g class="st1">
+		<polygon class="st2" points="184.6,448.1 393.1,448.2 408.8,430.7 408.9,393.7 202.2,393.7 184.6,409.9 		"/>
+		<path class="st2" d="M193.5,381.1l-21.9,23.4v56.6h229l21-22.6v-57.4H193.5z M412.5,431.6l-18.3,20.1H180.7v-43.5l19.9-18.1h211.8
+			V431.6z"/>
+	</g>
+	<text transform="matrix(1 0 0 1 237.6746 431.8078)" class="st1 st3 st4">게임 소개</text>
+</g>
+<g id="Layer_1">
+	<g id="Layer_2" class="st0">
+		<rect x="140.7" y="317" class="st1" width="327.1" height="255.1"/>
+	</g>
+	
+		<image style="display:none;overflow:visible;" width="250" height="80" xlink:href="square.png"  transform="matrix(1 0 0 1 173 380.8898)">
+	</image>
+	<g id="Layer_3_copy">
+		<g>
+			<polygon class="st2" points="184.6,448.1 393.1,448.2 408.8,430.7 408.9,393.7 202.2,393.7 184.6,409.9 			"/>
+			<path class="st2" d="M193.5,381.1l-21.9,23.4v56.6h229l21-22.6v-57.4H193.5z M412.5,431.6l-18.3,20.1H180.7v-43.5l19.9-18.1
+				h211.8V431.6z"/>
+		</g>
+		<path class="st5" d="M180.8,408.4v43.5h213.4l18.3-20.1v-41.5H200.7L180.8,408.4z M409,393.9l-0.2,37l-15.7,17.4l-208.5-0.1
+			l0-38.2l17.6-16.1H409z"/>
+	</g>
+</g>
+</svg>
